@@ -1,5 +1,5 @@
 .form-item {
-	margin-bottom: 1em;
+	margin-bottom: 24px;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -10,10 +10,11 @@
 	display: grid;
 	grid-template-areas: 'label' 'value' 'description';
 	grid-template-rows: auto auto auto;
+	gap: 8px;
 
 	@media screen and (min-width: 1200px) {
 		display: grid;
-		grid-column-gap: 1em;
+		grid-column-gap: 16px;
 		grid-template-areas: 'label value' 'description description';
 		grid-template-columns: minmax(min-content, var(--label-width, 12em)) 1fr;
 		grid-template-rows: auto auto;
@@ -23,21 +24,13 @@
 .form-item__buttons {
 	align-items: center;
 	display: flex;
-
-	> .button {
-		margin-right: 0.5em;
-
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+	gap: 8px;
 
 	&--column {
 		flex-direction: column;
 
 		> button {
-			margin-right: 0 !important;
-			margin-top: 0.5em;
+			margin-top: 8px;
 			width: 100%;
 
 			&:first-child {
@@ -52,7 +45,7 @@
 }
 
 .form-item__confirmation {
-  margin-bottom: 1em;
+  margin-bottom: 16px;
 }
 
 .form-item__label {
@@ -120,8 +113,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	height: auto;
-	min-height: 2.66667em;
-	padding: 0.5em 0 0 0.5em;
+	min-height: 56px;
+	padding: 8px 0 0 8px;
 }
 
 .form-item__input--tag {
@@ -130,8 +123,8 @@
 	display: inline-block;
 	flex-grow: 1;
 	height: auto;
-	margin: 0 0.5em 0.5em 0;
-	min-width: 5em;
+	margin: 0 8px 8px 0;
+	min-width: 80px;
 	padding: 0;
 	width: auto;
 
@@ -157,23 +150,23 @@
 	align-items: center;
 	background: var(--color-navigation);
 	border: 0 solid transparent;
-	border-radius: 0.1875em;
+	border-radius: 16px;
 	color: var(--color-text);
 	display: inline-flex;
 	flex-shrink: 0;
-	font-size: 0.9375em;
+	font-size: 0.8125rem;
 	justify-content: center;
-	line-height: 1.2;
-	margin: 0 0.5em 0.5em 0;
+	line-height: 1.5;
+	margin: 0 8px 8px 0;
 	min-height: 0;
-	padding: 0.25em 0.5em;
-	transition: background .5s;
+	padding: 4px 12px;
+	transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-item__tag-remove {
 	cursor: pointer;
-	margin-left: 0.5em;
-	transition: color .5s;
+	margin-left: 8px;
+	transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
 	&:hover {
 		color: var(--color-theme);
@@ -212,15 +205,15 @@
 }
 
 .form-group {
-	border: 0 solid var(--color-theme-dark);
+	border: 0 solid var(--color-border);
 	border-top-width: 1px;
 	font-family: inherit;
-	margin-bottom: 1em;
-	margin-top: 1em;
-	padding: 1em;
+	margin-bottom: 16px;
+	margin-top: 16px;
+	padding: 16px;
 
 	@media screen and (min-width: 1200px) {
-		padding: 1em 1em 0;
+		padding: 16px 16px 0;
 	}
 
 	&:last-child {
@@ -230,22 +223,23 @@
 
 .form-group__legend {
 	color: var(--color-theme);
-	font-size: 0.75em;
-	font-weight: 600;
+	font-size: 0.75rem;
+	font-weight: 500;
+	letter-spacing: 0.08333em;
 	line-height: 0;
-	margin-left: -0.5rem;
-	padding: 0 0.5rem;
+	margin-left: -8px;
+	padding: 0 8px;
 	position: relative;
 	text-transform: uppercase;
 }
 
 .input-option__field {
 	display: grid;
-	grid-column-gap: 1em;
+	grid-column-gap: 16px;
 	grid-template-columns: 1fr auto;
 
 	.button {
-		max-height: 3em;
+		max-height: 56px;
 	}
 }
 
@@ -256,14 +250,14 @@
 .input-option__items {
 	display: flex;
 	flex-flow: row wrap;
-	margin-left: -0.5em;
+	margin-left: -8px;
 }
 
 .button.input-option__item {
 	flex-shrink: 0;
-	margin: 0.5em 0 0 0.5em;
+	margin: 8px 0 0 8px;
 	min-height: 0;
-	padding: 0.25em 0.5em;
+	padding: 4px 8px;
 
 	&:hover {
 		background: var(--color-button-cancel);
@@ -424,11 +418,11 @@
 		margin-right: 0;
 
 		&:first-of-type {
-			border-radius: 0.1875em 0 0 0.1875em;
+			border-radius: 4px 0 0 4px;
 		}
 
 		&:last-of-type {
-			border-radius: 0 0.1875em 0.1875em 0;
+			border-radius: 0 4px 4px 0;
 			border-right: 0;
 		}
 	}
@@ -437,7 +431,7 @@
 .checkbox {
 	.button {
 		margin-right: 2px;
-		transition: all .3s;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 		&:last-of-type {
 			margin-right: 5px;
@@ -449,14 +443,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	text-align: initial;
+	width: 100%;
 
 	th, td {
 		border-bottom: 1px solid var(--color-border);
-		padding: 0.35em 1em;
+		padding: 12px 16px;
+		font-size: 0.875rem;
+	}
+
+	th {
+		font-weight: 500;
+		letter-spacing: 0.01071em;
+		text-align: left;
+		color: var(--color-text-dark);
 	}
 
 	tr {
 		background-color: var(--color-background);
+		transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover {
+			background-color: rgba(var(--color-theme-rgb, 25, 118, 210), 0.04);
+		}
 
 		&:nth-child(2n) {
 			background-color: var(--color-background-light);
