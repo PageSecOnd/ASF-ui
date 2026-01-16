@@ -72,6 +72,7 @@
     top: 0;
     width: 100%;
     z-index: 1002;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 
     .app--boxed-layout & {
       @media screen and (min-width: 1250px) {
@@ -86,10 +87,31 @@
     cursor: pointer;
     display: flex;
     justify-content: center;
-    padding: 0 1em;
+    padding: 0 16px;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    &:active::before {
+      width: 200px;
+      height: 200px;
+    }
 
     &.navigation__button--active, &:hover {
-      background: var(--color-theme-dark);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 

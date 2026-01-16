@@ -81,9 +81,10 @@
     padding-top: var(--navigation-height);
     position: fixed;
     top: 0;
-    transition: ease-in-out width .3s;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     width: var(--navigation-width);
     z-index: 1001;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
 
     .app--small-navigation & {
       overflow: initial;
