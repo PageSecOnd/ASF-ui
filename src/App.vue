@@ -106,6 +106,7 @@
     --color-theme: #{$color-theme-blue};
     --color-theme-dark: #{darken($color-theme-blue, 8)};
     --color-theme-light: #{lighten($color-theme-blue, 8)};
+    --color-theme-rgb: 25, 118, 210;
     --color-text: #{$color-text};
     --color-text-dark: #{$color-text-dark};
     --color-text-info: #{$color-text-info};
@@ -216,12 +217,14 @@
     --color-theme: #{$color-theme-blue};
     --color-theme-dark: #{darken($color-theme-blue, 8)};
     --color-theme-light: #{lighten($color-theme-blue, 8)};
+    --color-theme-rgb: 25, 118, 210;
   }
 
   .theme-red {
     --color-theme: #{$color-theme-red};
     --color-theme-dark: #{darken($color-theme-red, 8)};
     --color-theme-light: #{lighten($color-theme-red, 8)};
+    --color-theme-rgb: 211, 47, 47;
     --color-button-cancel: #{darken($color-theme-orange, 8)};
     --color-button-cancel-active: #{$color-theme-orange};
   }
@@ -230,24 +233,28 @@
     --color-theme: #{$color-theme-teal};
     --color-theme-dark: #{darken($color-theme-teal, 8)};
     --color-theme-light: #{lighten($color-theme-teal, 8)};
+    --color-theme-rgb: 0, 137, 123;
   }
 
   .theme-purple {
     --color-theme: #{$color-theme-purple};
     --color-theme-dark: #{darken($color-theme-purple, 8)};
     --color-theme-light: #{lighten($color-theme-purple, 8)};
+    --color-theme-rgb: 123, 31, 162;
   }
 
   .theme-green {
     --color-theme: #{$color-theme-green};
     --color-theme-dark: #{darken($color-theme-green, 8)};
     --color-theme-light: #{lighten($color-theme-green, 8)};
+    --color-theme-rgb: 56, 142, 60;
   }
 
   .theme-orange {
     --color-theme: #{$color-theme-orange};
     --color-theme-dark: #{darken($color-theme-orange, 8)};
     --color-theme-light: #{lighten($color-theme-orange, 8)};
+    --color-theme-rgb: 245, 124, 0;
   }
 
   .content {
