@@ -104,34 +104,43 @@
     --navigation-width: #{$size-navigation};
     --navigation-height: #{$size-navigation-small};
     --color-theme: #{$color-theme-blue};
-    --color-theme-dark: #{darken($color-theme-blue, 5)};
-    --color-theme-light: #{lighten($color-theme-blue, 5)};
+    --color-theme-dark: #{darken($color-theme-blue, 8)};
+    --color-theme-light: #{lighten($color-theme-blue, 8)};
     --color-text: #{$color-text};
     --color-text-dark: #{$color-text-dark};
     --color-text-info: #{$color-text-info};
-    --color-text-secondary: #{darken($color-text, 10)};
-    --color-text-disabled: #{darken($color-text, 25)};
-    --color-border: #{darken($color-text, 25)};
-    --color-background: #ecf0f5;
-    --color-background-modal: #ecf0f5;
+    --color-text-secondary: #{rgba($color-text-dark, 0.7)};
+    --color-text-disabled: #{rgba($color-text-dark, 0.38)};
+    --color-border: #{rgba($color-text-dark, 0.12)};
+    --color-background: #fafafa;
+    --color-background-modal: #fafafa;
     --color-background-light: #fff;
-    --color-background-dark: #a7a7a7;
-    --color-navigation: #222d32;
-    --color-navigation-dark: #{darken(#222d32, 3)};
-    --color-navigation-darker: #{darken(#222d32, 10)};
+    --color-background-dark: #e0e0e0;
+    --color-navigation: #263238;
+    --color-navigation-dark: #{darken(#263238, 3)};
+    --color-navigation-darker: #{darken(#263238, 8)};
 
     --color-button-cancel: #{$color-theme-red};
-    --color-button-cancel-active: #{lighten($color-theme-red, 5)};
-    --color-button-default: #222d32;
+    --color-button-cancel-active: #{darken($color-theme-red, 8)};
+    --color-button-default: #757575;
 
     --color-releases-pre: var(--color-text-secondary);
     --color-releases-code: rgb(27 31 35 / 5%);
+
+    --elevation-1: #{$elevation-1};
+    --elevation-2: #{$elevation-2};
+    --elevation-3: #{$elevation-3};
+    --elevation-4: #{$elevation-4};
+    --elevation-6: #{$elevation-6};
+    --elevation-8: #{$elevation-8};
   }
 
   html {
-    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
     height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -189,56 +198,56 @@
   }
 
   .app--dark-mode {
-    --color-background: #111;
-    --color-background-light: #222;
+    --color-background: #121212;
+    --color-background-light: #1e1e1e;
     --color-background-modal: #2d2d2d;
     --color-text: #e0e0e0;
-    --color-text-dark: #94999b;
-    --color-text-info: #ffa500;
-    --color-border: rgba(0, 0, 0, .5);
-    --color-text-secondary: #{darken(#bfbfbf, 10)};
-    --color-text-disabled: #{darken(#bfbfbf, 20)};
-    --color-button-default: #4f5454;
+    --color-text-dark: #ffffff;
+    --color-text-info: #ffa726;
+    --color-border: rgba(255, 255, 255, .12);
+    --color-text-secondary: #{rgba(#ffffff, 0.7)};
+    --color-text-disabled: #{rgba(#ffffff, 0.38)};
+    --color-button-default: #424242;
     --color-releases-pre: var(--color-text-dark);
     --color-releases-code: rgb(205 217 229 / 15%);
   }
 
   .theme-blue {
     --color-theme: #{$color-theme-blue};
-    --color-theme-dark: #{darken($color-theme-blue, 5)};
-    --color-theme-light: #{lighten($color-theme-blue, 5)};
+    --color-theme-dark: #{darken($color-theme-blue, 8)};
+    --color-theme-light: #{lighten($color-theme-blue, 8)};
   }
 
   .theme-red {
     --color-theme: #{$color-theme-red};
-    --color-theme-dark: #{darken($color-theme-red, 5)};
-    --color-theme-light: #{lighten($color-theme-red, 5)};
-    --color-button-cancel: #{darken($color-theme-orange, 5)};
+    --color-theme-dark: #{darken($color-theme-red, 8)};
+    --color-theme-light: #{lighten($color-theme-red, 8)};
+    --color-button-cancel: #{darken($color-theme-orange, 8)};
     --color-button-cancel-active: #{$color-theme-orange};
   }
 
   .theme-teal {
     --color-theme: #{$color-theme-teal};
-    --color-theme-dark: #{darken($color-theme-teal, 5)};
-    --color-theme-light: #{lighten($color-theme-teal, 5)};
+    --color-theme-dark: #{darken($color-theme-teal, 8)};
+    --color-theme-light: #{lighten($color-theme-teal, 8)};
   }
 
   .theme-purple {
     --color-theme: #{$color-theme-purple};
-    --color-theme-dark: #{darken($color-theme-purple, 5)};
-    --color-theme-light: #{lighten($color-theme-purple, 5)};
+    --color-theme-dark: #{darken($color-theme-purple, 8)};
+    --color-theme-light: #{lighten($color-theme-purple, 8)};
   }
 
   .theme-green {
     --color-theme: #{$color-theme-green};
-    --color-theme-dark: #{darken($color-theme-green, 5)};
-    --color-theme-light: #{lighten($color-theme-green, 5)};
+    --color-theme-dark: #{darken($color-theme-green, 8)};
+    --color-theme-light: #{lighten($color-theme-green, 8)};
   }
 
   .theme-orange {
     --color-theme: #{$color-theme-orange};
-    --color-theme-dark: #{darken($color-theme-orange, 5)};
-    --color-theme-light: #{lighten($color-theme-orange, 5)};
+    --color-theme-dark: #{darken($color-theme-orange, 8)};
+    --color-theme-light: #{lighten($color-theme-orange, 8)};
   }
 
   .content {
